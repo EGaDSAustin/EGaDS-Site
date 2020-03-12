@@ -1,3 +1,5 @@
+import 'react'
+
 const mediaList = [
     {
         name: 'Facebook',
