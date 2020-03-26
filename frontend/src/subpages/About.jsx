@@ -40,10 +40,6 @@ const officerList = [
         height:'',
         width:''
     }
-
-
-
-
 ]
 
 const About = (props) => {
@@ -57,9 +53,6 @@ const About = (props) => {
                 </Row>
             </Container>
         </div>
-
-
-
     );
 }
 
