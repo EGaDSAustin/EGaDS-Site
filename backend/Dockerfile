@@ -1,5 +1,8 @@
-FROM node;
+FROM node:latest
 
-RUN npm install;
+RUN mkdir /usr/src/app
+COPY ./ /usr/src/app/
+RUN cd /usr/src/app
+RUN npm install
 
-CMD ["node", "app.js"];
+CMD bash
