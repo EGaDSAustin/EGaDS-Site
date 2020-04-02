@@ -1,7 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 
 
 const mediaList = [
@@ -45,13 +42,7 @@ const officerList = [
 const About = (props) => {
     return (
         <div id='about'>
-            <Container>
-                <Row>
-                    <Col>
-                            //We can insert the blurb here     
-                    </Col>
-                </Row>
-            </Container>
+            We can insert the blurb here
         </div>
     );
 }
