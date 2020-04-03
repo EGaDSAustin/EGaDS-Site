@@ -1,14 +1,15 @@
 FROM node:lts-buster
 
-# RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-ADD ./package*.json ./
-RUN npm install
+RUN mkdir -p /usr/src/build
+WORKDIR /usr/src/build
+COPY ./package*.json ./
+RUN npm i --production --silent
 # COPY . .
+WORKDIR /usr/src/app
 EXPOSE 8080
 
-ENTRYPOINT [ "npm" ]
-CMD ["start"]
+ENTRYPOINT [ "make" ]
+CMD [ ".docker-start" ]
 
 # /*
 # Docker build coommands
