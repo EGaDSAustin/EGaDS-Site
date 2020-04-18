@@ -122,13 +122,14 @@ Gets an event based on name or date
 
 Params:
 
-| Name | Type                     | required | Description            |
-|------|--------------------------|----------|------------------------|
-| key  | String                   |  &#9744; | Access key of admin permission level  |
-| name     | String                   |  &#9744; | The name of the event     |
+| Name     | Type      | required | Description            |
+|----------|-----------|----------|------------------------|
+| key      | String    | &#9744; | Access key of admin permission level  |
+| name     | String    | &#9744; | The name of the event     |
 | type     | enum(gm, workshop, devnight, social, other) | &#9744; | The type of event   |
-| location | String  | &#9744; | The location of the event      |
-| date     | String  | &#9744; | The date of the event format string like `"MM/DD/YYYY"` |
+| location | String    | &#9744; | The location of the event      |
+| date     | String    | &#9744; | The date of the event format string like `"HH:MM MM/DD/YYYY"` |
+| banner   | String    | &#9745; | string of banner image for the event |
 
 
 Response:
@@ -143,10 +144,10 @@ Example response:
 ```
 {
    "id": "000000-0000-000000000",
-   "name": "egads super fun meetup"
-   "type": "social"
-   "location": "your mom's house"
-   "date": "04/20/2020"
+   "name": "egads super fun meetup",
+   "type": "social",
+   "location": "your mom's house",
+   "date": "04:20 04/20/2020"
 }
 ```
 
