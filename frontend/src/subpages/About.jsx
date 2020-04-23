@@ -27,7 +27,7 @@ const mediaList = [
         altText: 'twitter'
     }, 
 ]
-
+/*
 const officerList = [
     {
         name:'',
@@ -38,11 +38,43 @@ const officerList = [
         width:''
     }
 ]
+*/
+
+const SocialMedias = ({logo}) => {
+    return (
+            <a href = {logo.ref}><img style = {{
+                height:40,
+                width:40,
+                }} 
+                src={logo.img}
+                 alt={logo.altText}
+                /></a>
+    )
+}
+
+
+const Media = (props) => {
+    return(
+        <h1>
+            {mediaList.map((m, idx) => <SocialMedias logo ={m} key ={idx}/>)}
+        </h1>
+    );
+}
 
 const About = (props) => {
     return (
-        <div id='about'>
-            We can insert the blurb here
+        <div id='about' style  ={{backgroundColor : '#60666C', padding : '2vw'}}>
+            <h1 style = {{
+                color : "lightBlue",
+                fontSize : '50px'
+            }}>
+                About Us:
+            </h1>
+            We can insert information about our organization here
+        
+         <Media />
+        
+        
         </div>
     );
 }

@@ -9,9 +9,12 @@ const tablist = ['Showcase',
 
 
 const Tabs = (props) =>{
-    return(
-        tablist.join('\t          ')
+    return(<h1>Tabs</h1>
+        
+        
     );
+      
+    
 }
 
 export default Tabs;
