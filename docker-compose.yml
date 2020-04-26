@@ -1,13 +1,19 @@
-version: '3'
-services: 
+version: "3"
+services:
   frontend:
     build: ./frontend
+    environment:
+      - NODE_ENV=DEV
     volumes:
       - ./frontend:/usr/src/app
-    ports: 
-      - "3000:80" 
+    ports:
+      - "3000:80"
   backend:
+    environment:
+      - NODE_ENV=DEV
     build: ./backend
+    env_file:
+      - ./backend/dev.env
     volumes:
       - ./backend:/usr/src/app
     ports:

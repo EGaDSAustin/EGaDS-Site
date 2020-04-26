@@ -3,7 +3,7 @@ FROM node:lts-buster
 RUN mkdir -p /usr/src/build
 WORKDIR /usr/src/build
 COPY ./package*.json ./
-RUN npm i --production --silent
+RUN npm i --save-dev --production --silent
 # COPY . .
 WORKDIR /usr/src/app
 EXPOSE 8080
