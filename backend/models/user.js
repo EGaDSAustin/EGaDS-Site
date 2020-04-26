@@ -16,10 +16,18 @@ const UserSchema = mongoose.Schema({
   },
   year: {
     type: String,
-    enum: ["freshman", "sophomore", "junior", "senior", "super senior", "old"],
+    enum: [
+      "freshman",
+      "sophomore",
+      "junior",
+      "senior",
+      "super senior",
+      "old",
+      "non-student",
+    ],
     required: [true, "Year for student users required"],
   },
-  games: mongoose.Schema.Types.ObjectId,
+  games: [mongoose.Schema.Types.ObjectId],
 });
 
 const User = mongoose.model("user", UserSchema);

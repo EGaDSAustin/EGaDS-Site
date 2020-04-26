@@ -212,7 +212,7 @@ Params:
 | name     | String                   |  &#9744; | The name of the user     |
 | type     | enum(member, alum, officer, jo, general, industry, staff) | &#9744; | The type of user   |
 | discipline | String  | &#9744; | Main discipline of user      |
-| year     | enum(freshman, sophomore, junior, senior, super senior, old)  | &#9744; | Year for student users |
+| year     | enum(freshman, sophomore, junior, senior, super senior, old, non-student)  | &#9744; | Year for student users |
 | games    | String[]  | &#9744; | IDs for games the user has contributed to   |
 
 
