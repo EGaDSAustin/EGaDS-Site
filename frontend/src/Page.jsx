@@ -221,7 +221,6 @@ const styles = (theme) => ({
         zIndex: "1",
         borderRadius: "8px",
         backdropFilter: "blur(4.20px)",
-        filter: "blur(0.69px)",
     },
     social: {
         paddingLeft: "20px",

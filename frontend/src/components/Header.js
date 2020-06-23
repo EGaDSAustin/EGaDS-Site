@@ -32,35 +32,54 @@ const HashButton = withRouter(RawHashButton);
 
 const styles = {
     root: {},
-    toolBarLinks: {
-        marginLeft: "auto",
-    },
-    logo: {
-        position: "absolute",
-        left: "calc(50% - 30px)",
-        top: "calc(50% - 25px)",
-        align: "center",
-    },
-    logoImg: {
-        width: 60,
-    },
-    grow: {
-        flexGrow: 1,
-    },
     title: {
-        maxWidth: "calc(50% - 60px)",
         fontFamily: "ElectricBoots",
     },
-    bar: {
+    toolbar: {
         padding: "16px",
+        display: "grid",
+        gridTemplateColumns: "1fr 0.5fr 1fr",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    toolbarLogo: {
+        width: "69px",
+        marginTop: "12px",
+    },
+    toolbarLogoA: {
+        textAlign: "center",
+    },
+    toolbarButtons: {
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+    },
+    toolbarButton: {
+        flexGrow: "1",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    menuButton: {
+        margin: "0",
     },
     sidebarButtons: {
         padding: "0 16px",
-        width: "15vw",
+        minWidth: "15vw",
     },
     sidebarLogo: {
-        width: "64px",
+        width: "69px",
         padding: "16px",
+        marginTop: "12px",
+    },
+    blurBox: {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        height: "100%",
+        width: "100%",
+        zIndex: "-1",
+        backdropFilter: "blur(6.90px)",
     },
 };
 
@@ -70,39 +89,36 @@ const Header = ({ classes, position, history, location, ...props }) => {
     return (
         <>
             <AppBar position={position}>
-                <Toolbar className={cn(classes.bar)}>
+                <Toolbar className={cn(classes.toolbar)}>
                     <Typography variant="h4" className={cn(classes.title)}>
                         electronic game developers society
                     </Typography>
-                    <div className={cn(classes.grow)} />
-                    <div className={cn(classes.logo)}>
-                        <a href="/">
-                            <img
-                                src={logo}
-                                // src="http://pngimg.com/uploads/soviet_union/soviet_union_PNG54.png"
-                                alt="gamer"
-                                className={cn(classes.logoImg)}
-                            />
-                        </a>
+                    <a href="/" className={cn(classes.toolbarLogoA)}>
+                        <img
+                            src={logo}
+                            alt="gamer"
+                            className={cn(classes.toolbarLogo)}
+                        />
+                    </a>
+                    <div className={cn(classes.toolbarButtons)}>
+                        <div className={cn(classes.toolbarButton)}>
+                            <HashButton to="info">info</HashButton>
+                        </div>
+                        <div className={cn(classes.toolbarButton)}>
+                            <Button onClick={() => history.push("/bug")}> bug </Button>
+                        </div>
+                        <div className={cn(classes.toolbarButton)}>
+                            <IconButton
+                                edge="start"
+                                className={classes.menuButton}
+                                color="inherit"
+                                aria-label="menu"
+                                onClick={() => setDrawerOpen(!drawerOpen)}
+                            >
+                                <MoreHorizIcon />
+                            </IconButton>
+                        </div>
                     </div>
-
-                    <div className={cn(classes.grow)} />
-                    <div className={cn(classes.grow)} />
-                    <div className={cn(classes.grow)} />
-
-                    <HashButton to="info">info</HashButton>
-                    <div className={cn(classes.grow)} />
-                    <Button onClick={() => history.push("/bug")}> bug </Button>
-                    <div className={cn(classes.grow)} />
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="menu"
-                        onClick={() => setDrawerOpen(!drawerOpen)}
-                    >
-                        <MoreHorizIcon />
-                    </IconButton>
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -111,6 +127,7 @@ const Header = ({ classes, position, history, location, ...props }) => {
                 onClose={() => setDrawerOpen(false)}
                 variant="temporary"
             >
+                <div className={cn(classes.blurBox)}></div>
                 <img
                     src={logo}
                     // src="http://pngimg.com/uploads/soviet_union/soviet_union_PNG54.png"
