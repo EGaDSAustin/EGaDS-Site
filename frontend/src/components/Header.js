@@ -20,7 +20,7 @@ import logo from "../egadscontroller2.png";
 const RawHashButton = ({ location, to, ...props }) => (
     <Button
         component={HashLink}
-        scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
+        scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "nearest" })}
         to={`${location.pathname}#${to}`}
         props={props}
     >
