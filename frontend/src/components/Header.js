@@ -20,7 +20,7 @@ import logo from "../egadscontroller2.png";
 const RawHashButton = ({ location, to, ...props }) => (
     <Button
         component={HashLink}
-        scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "nearest" })}
+        scroll={(el) => el.scrollIntoView({behavior: "smooth", block: "nearest"})}
         to={`${location.pathname}#${to}`}
         props={props}
     >
@@ -102,10 +102,10 @@ const Header = ({ classes, position, history, location, ...props }) => {
                     </a>
                     <div className={cn(classes.toolbarButtons)}>
                         <div className={cn(classes.toolbarButton)}>
-                            <HashButton to="info">info</HashButton>
+                            <HashButton to="info">about us</HashButton>
                         </div>
                         <div className={cn(classes.toolbarButton)}>
-                            <Button onClick={() => history.push("/bug")}> bug </Button>
+                            <Button to="game-showcase" onClick={() => history.push("/gameshowcase")}> game showcase </Button>
                         </div>
                         <div className={cn(classes.toolbarButton)}>
                             <IconButton
@@ -126,6 +126,7 @@ const Header = ({ classes, position, history, location, ...props }) => {
                 open={drawerOpen}
                 onClose={() => setDrawerOpen(false)}
                 variant="temporary"
+                disableRestoreFocus="false"
             >
                 <div className={cn(classes.blurBox)}></div>
                 <img
