@@ -12,7 +12,7 @@ import sheets from "./assets/blueshape2.png";
 import hole from "./assets/blueshape5.png";
 import ball from "./assets/blueshape4.png";
 
-import mushroom from "./assets/games/mushroom.png";
+// import mushroom from "./assets/games/mushroom.png";
 import fall from "./assets/games/fall.png";
 import lone from "./assets/games/lone.png";
 import sock from "./assets/games/sock.png";
@@ -281,40 +281,87 @@ const games = [
     {
         name: "MY MINI MUSHROOM",
         img: "./assets/games/mushroom.png",
-        ref: "google.com",
+        ref: "http://google.com",
         alt: "good game"
-    }
+    },
+    {
+        name: "MY MINI MUSHROOM",
+        img: "./assets/games/fall.png",
+        ref: "http://google.com",
+        alt: "good game"
+    },
+    {
+        name: "Relm of The Lost Sock",
+        img: "./assets/games/sock.png",
+        ref: "http://google.com",
+        alt: "good game"
+    },
+    {
+        name: "Charmer",
+        img: "./assets/games/charmer.png",
+        ref: "http://google.com",
+        alt: "good game"
+    },
 ]
 
-const Game = ({game, classes, ...props}) => {
-    return (<Box className={cn(classes.box0)}>
-                    <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowLeft
-                            )}
-                        >
-                            <a href={game.ref}>
-                            <img
-                                src={game.img}
-                                alt={game.alt}
-                                className={cn(classes.bestBoye)}
-                            />
-                            </a>
-                            <div className={cn(classes.bestBoyeBorderLeft)}>
-                                {" "}
-                            </div>
-                            
-                        </Box>
-                        <Typography className={cn(classes.gameText)}>
-                            {game.name}
-                        </Typography>
-                    </Box>
-                    </Box>)
-}
 
+
+const GameRight = ({classes, game, ...props}) => {
+    return(<Box className={cn(classes.box1)}>
+        <a href={game.ref}>
+    <Box
+        className={cn(
+            classes.bestBoyeBox,
+            classes.boxShadowLeft
+        )}
+    >
+        
+        <img
+            src={require(game.img + "")}
+            alt={game.alt}
+            className={cn(classes.bestBoye)}
+        />
+      
+        <div className={cn(classes.bestBoyeBorderLeft)}>
+            {" "}
+        </div>
+        
+    </Box>
+    </a>
+    <Typography className={cn(classes.gameText)}>
+        {game.name}
+    </Typography>
+</Box>);
+}
+const GameLeft = ({classes, game, ...props}) => {
+    return(
+        <Box className={cn(classes.box1)}>
+        <Typography className={cn(classes.gameTextRight)}>
+            {game.name}
+        </Typography>
+        <a href={game.ref}>
+        <Box
+            className={cn(
+                classes.bestBoyeBox,
+                classes.boxShadowLeft
+            )}
+        >
+            
+            <img
+                src={require(game.img + "")}
+                alt={game.alt}
+                className={cn(classes.bestBoye)}
+            />
+            <div className={cn(classes.bestBoyeBorderLeft)}>
+                {" "}
+            </div>
+        </Box>
+        </a>
+
+    </Box>
+    );
+
+}
 const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
     return (
         <div className={cn(classes.root, rootClassName, className)}>
@@ -326,7 +373,11 @@ const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
                     </Typography>
                 </Box>
             </Container>
-
+            <Box className={cn(classes.box0)}></Box>
+            {/* <Box className={cn(classes.blurBox)}></Box> */}
+            <Box className={cn(classes.box1)}>
+           
+            </Box>
             <Container className={cn(classes.body)} id="info">
                 <Box className={cn(classes.box0)}>
                     <Box className={cn(classes.blurBox)}></Box>
@@ -353,47 +404,10 @@ const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
 
                 <Box className={cn(classes.box0)}>
                     <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowLeft
-                            )}
-                        >
-                            <img
-                                src={mushroom}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div className={cn(classes.bestBoyeBorderLeft)}>
-                                {" "}
-                            </div>
-                            
-                        </Box>
-                        <Typography className={cn(classes.gameText)}>
-                            MY MINI MUSHROOM
-                        </Typography>
-                    </Box>
-                    <Box className={cn(classes.box1)}>
-                        <Typography className={cn(classes.gameTextRight)}>
-                            THE FALL
-                        </Typography>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowLeft
-                            )}
-                        >
-                            <img
-                                src={fall}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div className={cn(classes.bestBoyeBorderLeft)}>
-                                {" "}
-                            </div>
-                        </Box>
-                    </Box>
+                    {games.map((game, idx) => {
+                        if(idx % 2 == 0) return <GameRight game={game} classes={classes} key={idx}/>
+                        else return <GameLeft game={game} classes={classes} key={idx}/>
+                    } )}
                 </Box>
 
                 <Box className={cn(classes.box0)}>

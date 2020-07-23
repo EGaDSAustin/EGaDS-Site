@@ -9,7 +9,9 @@ const styles = {
     root: {},
 };
 
-const TempDrawer = (open, ...props) => {
+// const TempDrawer = (open, ...props) => {
+const TempDrawer = (...props) => {
+    const [open, setOpen] = useState(false);
     const toggleDrawer = () => {
         setOpen(!open);
     };
