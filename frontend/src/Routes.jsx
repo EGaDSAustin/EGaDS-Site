@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Info from "./Info";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Page from "./Page";
 import GameShowcase from "./GameShowcase";
 import Header from "./components/Header.js";

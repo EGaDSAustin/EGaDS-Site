@@ -21,7 +21,7 @@ const RawHashButton = ({ location, to, ...props }) => (
     <Button
         component={HashLink}
         scroll={(el) => el.scrollIntoView({behavior: "smooth", block: "nearest"})}
-        to={`${location.pathname}#${to}`}
+        to={to}
         props={props}
     >
         {props.children}{" "}
@@ -102,7 +102,7 @@ const Header = ({ classes, position, history, location, ...props }) => {
                     </a>
                     <div className={cn(classes.toolbarButtons)}>
                         <div className={cn(classes.toolbarButton)}>
-                            <HashButton to="info">about us</HashButton>
+                            <HashButton to="/#info">about us</HashButton>
                         </div>
                         <div className={cn(classes.toolbarButton)}>
                             <Button to="game-showcase" onClick={() => history.push("/gameshowcase")}> game showcase </Button>
@@ -126,7 +126,7 @@ const Header = ({ classes, position, history, location, ...props }) => {
                 open={drawerOpen}
                 onClose={() => setDrawerOpen(false)}
                 variant="temporary"
-                disableRestoreFocus="false"
+                disableRestoreFocus={false}
             >
                 <div className={cn(classes.blurBox)}></div>
                 <img
@@ -137,26 +137,26 @@ const Header = ({ classes, position, history, location, ...props }) => {
                 />
                 <List className={classes.sidebarButtons}>
                     <ListItem>
-                        <HashButton to="info">ABOUT US</HashButton>
+                        <HashButton to="/#info">ABOUT US</HashButton>
                     </ListItem>
                     <ListItem>
-                        <HashButton to="login">LOG IN</HashButton>
+                        <HashButton to="/#login">LOG IN</HashButton>
                     </ListItem>
                     <ListItem>
-                        <HashButton to="gameShowcase">
+                        <HashButton to="/GameShowcase">
                             GAMES SHOWCASE
                         </HashButton>
                     </ListItem>
                     <ListItem>
-                        <HashButton to="socialMedia">
+                        <HashButton to={`${location.pathname}#socialMedia`}>
                             SOCIAL MEDIA/NEWS
                         </HashButton>
                     </ListItem>
                     <ListItem>
-                        <HashButton to="resources">RESOURCES</HashButton>
+                        <HashButton to="/#resources">RESOURCES</HashButton>
                     </ListItem>
                     <ListItem>
-                        <HashButton to="contact">CONTACT US</HashButton>
+                        <HashButton to="/#contact">CONTACT US</HashButton>
                     </ListItem>
                 </List>
             </Drawer>

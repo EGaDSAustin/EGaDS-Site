@@ -1,13 +1,13 @@
 import { React, useState } from "react";
 import { SwipeableDrawer } from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
-import { withRouter } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-import cn from "classnames";
+// import { withStyles } from "@material-ui/styles";
+// import { withRouter } from "react-router-dom";
+// import { HashLink } from "react-router-hash-link";
+// import cn from "classnames";
 
-const styles = {
-    root: {},
-};
+// const styles = {
+//     root: {},
+// };
 
 // const TempDrawer = (open, ...props) => {
 const TempDrawer = (...props) => {
@@ -23,9 +23,9 @@ const TempDrawer = (...props) => {
     );
 };
 
-const Menu = ({ classes, position, history, ...props }) => {
-    return <SwipeableDrawer></SwipeableDrawer>;
-};
+// const Menu = ({ classes, position, history, ...props }) => {
+//     return <SwipeableDrawer></SwipeableDrawer>;
+// };
 
 // Menu = withRouter(withStyles(styles)(Menu)) ;
 // export Menu;
