@@ -137,6 +137,9 @@ const Header = ({ classes, position, history, location, ...props }) => {
                 />
                 <List className={classes.sidebarButtons}>
                     <ListItem>
+                        <Button to="game-jam" onClick={() => history.push("/gamejam")}> GAME JAM 2020 </Button>
+                    </ListItem>
+                    <ListItem>
                         <HashButton to="/#info">ABOUT US</HashButton>
                     </ListItem>
                     <ListItem>

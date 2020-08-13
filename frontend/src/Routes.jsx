@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Page from "./Page";
 import GameShowcase from "./GameShowcase";
+import GameJam from "./GameJam";
 import Header from "./components/Header.js";
 
 const SiteRouter = (props) => {
@@ -14,6 +15,9 @@ const SiteRouter = (props) => {
                 </Route>
                 <Route path="/GameShowcase">
                     <GameShowcase />
+                </Route>
+                <Route path="/GameJam">
+                    <GameJam />
                 </Route>
             </Switch>
         </Router>
