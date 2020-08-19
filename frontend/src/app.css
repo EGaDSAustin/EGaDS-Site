@@ -143,7 +143,7 @@ body {
       width: 369px;
       margin-left: 0px;
       max-width: 369px;
-  },
+  }
   
   
   /* .infoRow .infoCard {
@@ -161,10 +161,9 @@ body {
   }
   
   @font-face {
-      font-family: 'Futura LT Book';
-      font-style: normal;
-      font-weight: normal;
-      /* src: local('Futura LT Book'), url('./assets/FuturaLT-Book.woff') format('woff'); */
+    font-family: "KotoriRose";
+    src: local("KotoriRoseReg"),
+        url(./fonts/KotoriRose-Regular.otf) format("otf");
   }
   
   

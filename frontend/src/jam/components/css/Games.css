@@ -1,0 +1,41 @@
+.gallery_img {
+    -webkit-filter: brightness(100%);
+}
+
+.gallery_img:hover {
+    background: rgba(66, 43, 0, 0.3);
+    -webkit-filter:  brightness(80%) blur(2px);
+    filter: brightness(80%) blur(2px);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card-container .name_overlay {
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    padding: 2px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+.card-container:hover .name_overlay {
+    opacity: 1;
+}
