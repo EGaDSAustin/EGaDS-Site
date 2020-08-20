@@ -118,7 +118,7 @@ a {
 
 .schedulesMainGrid {
     background-color: #ecb6ff;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
 #very-specific-design {
@@ -142,7 +142,18 @@ a {
     width: 369px;
     margin-left: 0px;
     max-width: 369px;
-},
+}
+
+.schedulesBottomText {
+    background-color: white;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-left: 0px;
+    max-width: 872px;
+}
 
 
 /* .infoRow .infoCard {
@@ -150,7 +161,7 @@ a {
 } */
 
 /* .infoCard {
-    display: inline-block;
+    width: 500px;
 } */
 
 .scheduleElem {

@@ -34,7 +34,9 @@ const styles = {
         height: '80px',
         marginLeft: '50px',
         marginTop: '20px',
-        textAlign: 'left'
+        textAlign: 'left',
+        fontSize: '18px',
+        // margin: 'auto',
     },
     // container: {
     //     backgroundColor: 'white',
@@ -63,94 +65,26 @@ const styles = {
 
 
 const schedule_info = [{
-        date: "Friday, Sept 20 @ GDC",
+        date: "Thursday, Sept 17",
         events: [{
-                time: "4:00 pm",
-                description: "Sponsor and Student Mixer, 3rd Floor Atrium" //: Past games showcase, tabling, refreshments, jackbox/other icebreakers"
-            },
-            {
-                time: "5:00 pm",
-                description: "Opening remarks, Auditorium"
-            },
-            {
-                time: "5:20 pm",
-                description: "Theme reveal and official start of the game jam!"
-            },
-            {
                 time: "6:00 pm",
-                description: "Version Control Workshop by Ava Pek"
-            },
-            {
-                time: "6:45 pm",
-                description: "Dinner is served"
+                description: "Kick-Off and Theme Reveal"
             },
             {
                 time: "7:00 pm",
-                description: "Workshop by Magic Leap"
-            },
-            {
-                time: "1:00 am",
-                description: "Building closes"
+                description: "Jamming starts!"
             },
         ],
     },
     {
-        date: "Saturday, Sept 21 @ GDC",
+        date: "Sunday, Sept 20",
         events: [{
-                time: "9:00 am",
-                description: "Building reopens"
-            },
-            {
-                time: "9:30 am",
-                description: "Breakfast is served"
-            },
-            {
-                time: "11:00am",
-                description: "Unity Scripting Workshop by EGaDS!"
-            },
-            {
-                time: "12:00pm",
-                description: "Building to Target Platforms by MJ Johns"
-            },
-            {
-                time: "1:00 pm",
-                description: "Lunch is served"
-            },
-            {
-                time: "5:00 pm",
-                description: "Game Polishing by MJ Johns"
-            },
-            {
-                time: "7:00 pm",
-                description: "Dinner is served"
-            },
-            {
-                time: "1:00 am",
-                description: "Building closes (go sleep and shower)"
-            },
-        ],
-    },
-    {
-        date: "Sunday, Sept 22 @ GDC",
-        events: [{
-                time: "9:00 am",
-                description: "Building opens"
-            },
-            {
-                time: "11:00am",
-                description: "Brunch is served"
+                time: "11:00 am",
+                description: "Jamming ends!"
             },
             {
                 time: "12:00 pm",
-                description: "Submissions are due on itch.io"
-            },
-            {
-                time: "12:15 pm",
-                description: "Judging"
-            },
-            {
-                time: "1:30 pm",
-                description: "Awards and final remarks"
+                description: "itch.io page submissions due"
             },
         ],
     },
@@ -174,7 +108,7 @@ function createSchedule() {
                                             <Typography variant="h4" style={styles.time}>{event.time}</Typography>
                                         </Grid>
                                         <Grid item xs = {9}>
-                                            <Typography variant = "body1" style={styles.description}>{event.description}</Typography>
+                                            <Typography variant = "subtitle1" style={styles.description}>{event.description}</Typography>
                                         </Grid>
                                     </Grid>
                                 </Container>
@@ -199,6 +133,11 @@ export class Schedule extends React.Component {
                     Schedule 
                 </Typography> 
                 {createSchedule()} 
+                <div className = "schedulesBottomText" style={{marginTop: '20px'}}>
+                    <Typography variant = "h4" style={{color: 'black', width: '100%', paddingTop: '15px', fontSize: '18px'}}>
+                        Check back soon for times of the Game Jam Showcase, Judging, and the Closing and Awards Ceremony!
+                    </Typography>
+                </div>
             </div>
         )
     }

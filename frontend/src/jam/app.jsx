@@ -10,6 +10,7 @@ import imageMapResize from 'image-map-resizer'
 import { Navbar } from './components/Navbar';
 import { Title } from './components/Title';
 import { Register } from './components/Register';
+import { SignUp } from './components/SignUp';
 import { Schedule } from './components/Schedule';
 import { Games } from './components/Games';
 import { Sponsors } from './components/Sponsors';
@@ -57,11 +58,12 @@ class App extends React.Component {
                     <br/>
                       <div id='title'><Title/></div>
                       {/* <div id='register'><Register/></div> */}
-                      <Fab variant="extended" aria-label="add" color="primary" to="/theme" onClick={ScrollToTop} component={RouterLink}>
-                        Theme!
+                      <Fab disabled = "true" variant="extended" aria-label="add" color="primary" to="/theme" onClick={ScrollToTop} component={RouterLink}>
+                        Theme TBA!
                       </Fab>
                       <img src={jellyLong} style={{ maxWidth: '100%', width: 'auto', marginTop: '-200px', marginBottom: '-200px' }} />
                       <div style={{marginTop: '-120px', paddingBottom: "0px", height: '20px', backgroundColor: '#ecb6ff'}}> </div>
+                      <div id='signup'><SignUp/></div>
                       <div id='schedule'><Schedule/></div>
                       <div id='games'><Games/></div>
                       <div id='sponsors'><Sponsors/></div>
