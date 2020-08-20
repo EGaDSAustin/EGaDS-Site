@@ -170,6 +170,17 @@ a {
     height: 162px;
 }
 
+.SponsorImg {
+    max-width: 500px;
+    opacity: 0.5;
+    transition:opacity 0.5s
+}
+
+.SponsorImg:hover {
+    opacity: 1;
+    transition:opacity 0.5s
+}
+
 /* @font-face {
     font-family: 'Futura LT Book';
     font-style: normal;

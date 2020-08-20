@@ -36,7 +36,7 @@ export class Title extends React.Component {
                             photo={whoImage} alt_text='who_image'
                             description={
                                 <div>
-                                    <Typography variant="subtitle1">This event is hosted by <a href="https://www.facebook.com/groups/egadsaustin/">EGaDS!</a>, a student
+                                    <Typography variant="subtitle1">This event is hosted by <a href="https://www.facebook.com/groups/egadsaustin/" target="_blank" rel="noopener">EGaDS!</a>, a student
                                     organization dedicated to fostering game development on UT campus. It's open to all skill levels and is free to attend!</Typography>
                                 </div>
                             } /></Grid>
@@ -55,7 +55,7 @@ export class Title extends React.Component {
                             description={
                             <div>
                             <Typography variant="subtitle1">
-                                On the <a href="https://www.facebook.com/groups/egadsaustin/">UT Game Jam 2020 Discord server!</a> We're all about practicing social distancing and staying safe.
+                                On the <a href="https://discord.gg/FHs7hAN" target="_blank" rel="noopener">UT Game Jam 2020 Discord server!</a> We're all about practicing social distancing and staying safe.
                             </Typography>
                         </div>
                         }/>

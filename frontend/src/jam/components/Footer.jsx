@@ -23,7 +23,7 @@ const styles = {
         padding: "10px",
     },
     description: {
-        fontWeight: "400",
+        fontSize: "20px",
     },
     link: {
         color: "#a87de7",

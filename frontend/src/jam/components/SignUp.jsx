@@ -19,7 +19,8 @@ const styles = {
         marginRight: "auto",
         backgroundColor: "white",
         width: '55%',
-        padding: '20px'
+        padding: '20px',
+        zIndex: '99',
     },
     text: {
         color: 'black',
@@ -70,12 +71,12 @@ export class SignUp extends React.Component {
                 <div style={styles.subcontainer}>
                     <Typography variant = "h3" style={styles.text}>
                             All you have to do to register is fill out 
-                            <Link href="https://discord.com/invite/JnNPF6d"
+                            <Link href="https://forms.gle/DeGPcPmJc2anyRfT9"
                                 target="_blank"
                                 rel="noopener" 
                                 style={styles.link}> this Google Form </Link> 
                                 and then join the 
-                                <Link href="https://discord.com/invite/JnNPF6d"
+                                <Link href="https://discord.gg/FHs7hAN"
                                 target="_blank"
                                 rel="noopener" 
                                 style={styles.link}> UT Game Jam 2020 Discord server! </Link> 

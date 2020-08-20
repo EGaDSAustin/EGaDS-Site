@@ -16,7 +16,7 @@ import { Games } from './components/Games';
 import { Sponsors } from './components/Sponsors';
 import { Footer } from './components/Footer';
 import { Theme } from './components/Theme';
-import jellyLong from './assets/jellylong3.png';
+import jellyLong from './assets/jellylong4.png';
 
 import { Link as RouterLink } from 'react-router-dom'
 import Fab from '@material-ui/core/Fab';
@@ -61,14 +61,15 @@ class App extends React.Component {
                       <Fab disabled = "true" variant="extended" aria-label="add" color="primary" to="/theme" onClick={ScrollToTop} component={RouterLink}>
                         Theme TBA!
                       </Fab>
-                      <img src={jellyLong} style={{ maxWidth: '100%', width: 'auto', marginTop: '-200px', marginBottom: '-200px' }} />
-                      <div style={{marginTop: '-120px', paddingBottom: "0px", height: '20px', backgroundColor: '#ecb6ff'}}> </div>
-                      <div id='signup'><SignUp/></div>
-                      <div id='schedule'><Schedule/></div>
-                      <div id='games'><Games/></div>
-                      <div id='sponsors'><Sponsors/></div>
-                    <Footer/>
-                  </div>
+                      <img src={jellyLong} style={{ width: '100%', marginBottom: '-10px'}} />
+                      <div style={{backgroundColor: '#ecb6ff'}}>
+                        <div id='signup'><SignUp/></div>
+                        <div id='schedule'><Schedule/></div>
+                        <div id='games'><Games/></div>
+                        <div id='sponsors'><Sponsors/></div>
+                        <Footer/>
+                      </div>
+                    </div>
               )}/>
               <Route path="/theme" component={Theme}/>
               <Route path='/submit' component={() => { 
