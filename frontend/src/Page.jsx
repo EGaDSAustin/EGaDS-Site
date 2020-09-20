@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Container, Box, Link, SvgIcon } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import cn from "classnames";
-import goodboye from "./goodboye.png";
+import goodboye from "./assets/goodboye.png";
 import splash from "./assets/photos/carmen.jpg";
 import torus from "./assets/blueshape1.png";
 import twisty from "./assets/blueshape3.png";

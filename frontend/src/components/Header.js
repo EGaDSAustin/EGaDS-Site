@@ -14,8 +14,9 @@ import { withRouter } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import cn from "classnames";
+
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import logo from "../egadscontroller2.png";
+import logo from "../assets/egadscontroller2.png";
 
 const RawHashButton = ({ location, to, ...props }) => (
     <Button
@@ -136,9 +137,9 @@ const Header = ({ classes, position, history, location, ...props }) => {
                     className={cn(classes.sidebarLogo)}
                 />
                 <List className={classes.sidebarButtons}>
-                    <ListItem>
+                    {/* <ListItem>
                         <Button to="game-jam" onClick={() => history.push("/gamejam")}> GAME JAM 2020 </Button>
-                    </ListItem>
+                    </ListItem> */}
                     <ListItem>
                         <HashButton to="/#info">ABOUT US</HashButton>
                     </ListItem>
