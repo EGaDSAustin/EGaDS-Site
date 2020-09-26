@@ -12,6 +12,8 @@ import sheets from "./assets/blueshape2.png";
 import hole from "./assets/blueshape5.png";
 import ball from "./assets/blueshape4.png";
 
+import Socials from './components/Socials';
+
 // import mushroom from "./assets/games/mushroom.png";
 // import fall from "./assets/games/fall.png";
 // import lone from "./assets/games/lone.png";
@@ -308,6 +310,14 @@ const games = [
         refRight: "http://google.com",
         altRight: "good game",
     },
+    {
+        nameLeft: "REALM OF THE LOST SOCK",
+        imgLeft: "./assets/games/sock.png",
+        refLeft: "http://google.com",
+        altLeft: "good game",
+
+        quoteRight: "socks ahahahah",
+    },
 ];
 
 const GameRow = ({ classes, game, ...props }) => {
@@ -487,35 +497,6 @@ const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
                             );
                     })}
 
-                <Box className={cn(classes.box0)}>
-                    <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowLeft
-                            )}
-                        >
-                            <img
-                                src={sock}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div className={cn(classes.bestBoyeBorderLeft)}>
-                                {" "}
-                            </div>
-                        </Box>
-                        <Typography className={cn(classes.gameText)}>
-                            SOCK
-                        </Typography>
-                    </Box>
-                    <Box className={cn(classes.box1, classes.rightBox)}>
-                        <Typography className={cn(classes.quoteText)}>
-                            "just socks."
-                        </Typography>
-                    </Box>
-                </Box>
-
                 
                 <img
                     src={torus}
@@ -554,7 +535,8 @@ const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
                     />
                     
                 </div>
-                <Box
+                <Socials id="socialMedia"/>
+                {/* <Box
                         className={cn(classes.box1, classes.centerBox)}
                         id="socialMedia"
                     >
@@ -616,7 +598,7 @@ const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
                                 </Link>
                             </Typography>
                         </Box>
-                    </Box>
+                    </Box> */}
                 
             </Container>
         </div>

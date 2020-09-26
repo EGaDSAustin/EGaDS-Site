@@ -15,6 +15,8 @@ import gameJam3 from "./assets/photos/gamejam3.JPG";
 import tetris from "./assets/photos/tetris.JPG";
 import whale from "./assets/photos/whale.JPG";
 
+import Socials from './components/Socials';
+
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import MailIcon from "@material-ui/icons/Mail";
@@ -511,7 +513,8 @@ const Page = ({ classes, rootClassName, className, ...props }) => {
                         </Box>
                     </Box>
 
-                    <Box
+                    <Socials headerText="SOCIALS" id="socialMedia"/>
+                    {/* <Box
                         className={cn(classes.box1, classes.centerBox)}
                         id="socialMedia"
                     >
@@ -580,7 +583,7 @@ const Page = ({ classes, rootClassName, className, ...props }) => {
                                 </Link>
                             </Typography>
                         </Box>
-                    </Box>
+                    </Box> */}
                 </Box>
 
                 <img
