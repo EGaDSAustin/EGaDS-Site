@@ -279,6 +279,86 @@ const styles = (theme) => ({
     },
 });
 
+/*
+const games = [
+    {
+        type: "game",
+        props: {
+            name: "MY MINI MUSHROOM",
+            img: "./assets/games/mushroom.png",
+            ref: "http://google.com",
+            alt: "good game",
+        },
+
+    },
+    {
+        type: "game",
+        props: {
+            name: "THE FALL",
+            img: "./assets/games/fall.png",
+            ref: "http://google.com",
+            alt: "good game",
+        },
+
+    },
+    {
+        type: "game",
+        props: {
+            name: "REALM OF THE LOST SOCK",
+            img: "./assets/games/sock.png",
+            ref: "http://google.com",
+            alt: "good game",
+        },
+
+    },
+    {
+        type: "quote",
+        props: {
+            text: "socks ahahahah",
+        },
+
+    },
+    {
+        type: "game",
+        props: {
+            name: "CHARMER",
+            img: "./assets/games/charmer.png",
+            ref: "http://google.com",
+            alt: "good game",
+        },
+
+    },
+    {
+        type: "game",
+        props: {
+            name: "MY MINI MUSHROOM",
+            img: "./assets/games/mushroom.png",
+            ref: "http://google.com",
+            alt: "good game",
+        },
+
+    },
+    {
+        type: "quote",
+        props: {
+            text: "socks hooray",
+        },
+
+    },
+    {
+        type: "game",
+        props: {
+            name: "REALM OF THE LOST SOCK",
+            img: "./assets/games/sock.png",
+            ref: "http://google.com",
+            alt: "good game",
+        },
+
+    },
+]
+
+*/
+
 const games = [
     {
         nameLeft: "MY MINI MUSHROOM",
@@ -324,48 +404,15 @@ const GameRow = ({ classes, game, ...props }) => {
     return (
         <Box className={cn(classes.box0)}>
             <Box className={cn(classes.blurBox)}></Box>
-            <Box className={cn(classes.box1)}>
-                <a href={game.refRight}>
-                    <Box
-                        className={cn(
-                            classes.bestBoyeBox,
-                            classes.boxShadowLeft
-                        )}
-                    >
-                        <img
-                            src={require(game.imgRight + "")}
-                            alt={game.altRight}
-                            className={cn(classes.bestBoye)}
-                        />
 
-                        <div className={cn(classes.bestBoyeBorderLeft)}> </div>
-                    </Box>
-                </a>
-                <Typography className={cn(classes.gameText)}>
-                    {game.nameRight}
-                </Typography>
-            </Box>
-
-            <Box className={cn(classes.box1)}>
-                <Typography className={cn(classes.gameTextRight)}>
-                    {game.nameLeft}
-                </Typography>
-                <a href={game.refLeft}>
-                    <Box
-                        className={cn(
-                            classes.bestBoyeBox,
-                            classes.boxShadowLeft
-                        )}
-                    >
-                        <img
-                            src={require(game.imgLeft + "")}
-                            alt={game.altLeft}
-                            className={cn(classes.bestBoye)}
-                        />
-                        <div className={cn(classes.bestBoyeBorderLeft)}> </div>
-                    </Box>
-                </a>
-            </Box>
+            <GameBottomTitle
+                game={game}
+                classes={classes}
+            />
+            <GameTopTitle
+                game={game}
+                classes={classes}
+            />
         </Box>
     );
 };
@@ -374,27 +421,11 @@ const QuoteRow = ({ classes, game, ...props }) => {
     return (
         <Box className={cn(classes.box0)}>
             <Box className={cn(classes.blurBox)}></Box>
-            <Box className={cn(classes.box1)}>
-                <a href={game.refLeft}>
-                    <Box
-                        className={cn(
-                            classes.bestBoyeBox,
-                            classes.boxShadowLeft
-                        )}
-                    >
-                        <img
-                            src={require(game.imgLeft + "")}
-                            alt={game.altLeft}
-                            className={cn(classes.bestBoye)}
-                        />
 
-                        <div className={cn(classes.bestBoyeBorderLeft)}> </div>
-                    </Box>
-                </a>
-                <Typography className={cn(classes.gameText)}>
-                    {game.nameLeft}
-                </Typography>
-            </Box>
+            <GameBottomTitle
+                game={game}
+                classes={classes}
+            />
 
             <Box className={cn(classes.box1, classes.rightBox)}>
                 <Typography className={cn(classes.quoteText)}>
@@ -405,25 +436,60 @@ const QuoteRow = ({ classes, game, ...props }) => {
     );
 };
 
-// const GameLeft = ({ classes, game, ...props }) => {
-//     return (
-//         <Box className={cn(classes.box1)}>
-//             <Typography className={cn(classes.gameTextRight)}>
-//                 {game.name}
-//             </Typography>
-//             <a href={game.ref}>
-//                 <Box className={cn(classes.bestBoyeBox, classes.boxShadowLeft)}>
-//                     <img
-//                         src={require(game.img + "")}
-//                         alt={game.alt}
-//                         className={cn(classes.bestBoye)}
-//                     />
-//                     <div className={cn(classes.bestBoyeBorderLeft)}> </div>
-//                 </Box>
-//             </a>
-//         </Box>
-//     );
-// };
+// title on the bottom (will show up on left)
+const GameBottomTitle = ({ classes, game, ...props }) => {
+    return (
+        <Box className={cn(classes.box1)}>
+            <a href={game.refLeft}>
+                <Box
+                    className={cn(
+                        classes.bestBoyeBox,
+                        classes.boxShadowLeft
+                    )}
+                >
+                    <img
+                        src={require(game.imgLeft + "")}
+                        alt={game.altLeft}
+                        className={cn(classes.bestBoye)}
+                    />
+
+                    <div className={cn(classes.bestBoyeBorderLeft)}> </div>
+                </Box>
+            </a>
+            <Typography className={cn(classes.gameText)}>
+                {game.nameLeft}
+            </Typography>
+        </Box>
+    );
+};
+
+// title on the top (will show up on the right)
+const GameTopTitle = ({ classes, game, ...props }) => {
+    return(
+        <Box className={cn(classes.box1)}>
+            <Typography className={cn(classes.gameTextRight)}>
+                {game.nameRight}
+            </Typography>
+            <a href={game.refRight}>
+                <Box
+                    className={cn(
+                        classes.bestBoyeBox,
+                        classes.boxShadowLeft
+                    )}
+                >
+                    <img
+                        src={require(game.imgRight + "")}
+                        alt={game.altRight}
+                        className={cn(classes.bestBoye)}
+                    />
+
+                    <div className={cn(classes.bestBoyeBorderLeft)}> </div>
+                </Box>
+            </a>
+                
+            </Box>
+    );
+};
 
 const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
     return (
