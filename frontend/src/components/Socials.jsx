@@ -36,7 +36,7 @@ const styles = (theme) => ({
   },
   titleMiddle: {
     color: theme.palette.text.title,
-    padding: "8px",
+    padding: "16px",
     fontFamily: "inherit",
     fontWeight: "bold",
     textAlign: "center",
@@ -56,21 +56,30 @@ const styles = (theme) => ({
   lessTopPadding: {
       paddingTop: "20px",
   },
+  lessTopMargin: {
+    marginTop: "0px",
+  },
 });
 
 
 const Socials = ({ classes, ...props }) => {
+  let header;
+  if(props.headerText != null) {
+      header = 
+        <Typography
+            variant="h4"
+            className={cn(classes.titleMiddle)}
+        >
+            {props.headerText}
+        </Typography>;
+  }
+  
   return (
     <Box
       className={cn(classes.box1, classes.centerBox)}
       id="socialMedia"
     >
-      <Typography
-          variant="h4"
-          className={cn(classes.titleMiddle)}
-      >
-          {props.headerText}
-      </Typography>
+      {header}
 
       <Box
           className={cn(

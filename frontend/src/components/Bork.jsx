@@ -32,8 +32,6 @@ const Bork = ({ classes, ...props }) => {
     let socials;
     if(props.socials === "yes") {
       socials = <Socials />;
-    } else {
-      socials = <div></div>;
     }
     return (
         <Container align="center" className={cn(classes.footer)}>
