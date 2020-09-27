@@ -1,9 +1,8 @@
 import React from "react";
-import { Typography, Container, Box, Link, SvgIcon } from "@material-ui/core";
+import { Typography, Container, Box, Link } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import cn from "classnames";
 
-import goodboye from "./assets/goodboye.png";
 import splash from "./assets/photos/carmen.jpg";
 
 import torus from "./assets/blueshape1.png";
@@ -12,20 +11,20 @@ import sheets from "./assets/blueshape2.png";
 import hole from "./assets/blueshape5.png";
 import ball from "./assets/blueshape4.png";
 
-import Socials from './components/Socials';
+import Bork from './components/Bork';
 
 // import mushroom from "./assets/games/mushroom.png";
 // import fall from "./assets/games/fall.png";
 // import lone from "./assets/games/lone.png";
-import sock from "./assets/games/sock.png";
+// import sock from "./assets/games/sock.png";
 // import charmer from "./assets/games/charmer.png";
 
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import MailIcon from "@material-ui/icons/Mail";
-import YouTubeIcon from "@material-ui/icons/YouTube";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+// import TwitterIcon from "@material-ui/icons/Twitter";
+// import MailIcon from "@material-ui/icons/Mail";
+// import YouTubeIcon from "@material-ui/icons/YouTube";
 
-import { ReactComponent as DiscordIcon } from "./assets/Discord-Logo-White.svg";
+// import { ReactComponent as DiscordIcon } from "./assets/Discord-Logo-White.svg";
 
 const styles = (theme) => ({
     root: {
@@ -591,7 +590,8 @@ const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
                 />
             </Container>
 
-            <Container align="center" className={cn(classes.footer)}>
+            <Bork socials="yes" woof="bork"/>
+            {/* <Container align="center" className={cn(classes.footer)}>
                 <div className={cn(classes.inlineBlock, classes.heWoof)}>
                     <Typography align="center">bork</Typography>
                     <img
@@ -602,71 +602,9 @@ const GameShowcase = ({ classes, rootClassName, className, ...props }) => {
                     
                 </div>
                 <Socials id="socialMedia"/>
-                {/* <Box
-                        className={cn(classes.box1, classes.centerBox)}
-                        id="socialMedia"
-                    >
-                        <Box
-                            className={cn(
-                                classes.transparentBox,
-                                classes.lessTopPadding,
-                                classes.inlineBlock
-                            )}
-                        >
-                            <Typography
-                                className={cn(classes.paragraph)}
-                                align="center"
-                            >
-                                <Link
-                                    href="https://discord.com/invite/JnNPF6d"
-                                    target="_blank"
-                                    rel="noopener"
-                                    className={cn(classes.social)}
-                                >
-                                    <SvgIcon
-                                        component={DiscordIcon}
-                                        viewBox="0 0 220 220"
-                                        fontSize="large"
-                                    />
-                                </Link>
-                                <Link
-                                    href="https://facebook.us16.list-manage.com/subscribe?u=91470f849ef822234cb47861a&id=34673605c6"
-                                    target="_blank"
-                                    rel="noopener"
-                                    className={cn(classes.social)}
-                                >
-                                    <MailIcon fontSize="large" />
-                                </Link>
-                                <Link
-                                    href="https://twitter.com/EGaDSAustin"
-                                    target="_blank"
-                                    rel="noopener"
-                                    className={cn(classes.social)}
-                                >
-                                    <TwitterIcon fontSize="large" />
-                                </Link>
-
-                                <Link
-                                    href="https://www.facebook.com/groups/egadsaustin"
-                                    target="_blank"
-                                    rel="noopener"
-                                    className={cn(classes.social)}
-                                >
-                                    <FacebookIcon fontSize="large" />
-                                </Link>
-                                <Link
-                                    href="https://www.youtube.com/user/egadsaustin"
-                                    target="_blank"
-                                    rel="noopener"
-                                    className={cn(classes.social)}
-                                >
-                                    <YouTubeIcon fontSize="large" />
-                                </Link>
-                            </Typography>
-                        </Box>
-                    </Box> */}
                 
-            </Container>
+                
+            </Container> */}
         </div>
     );
 };

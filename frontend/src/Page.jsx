@@ -1,8 +1,7 @@
 import React from "react";
-import { Typography, Container, Box, Link, SvgIcon } from "@material-ui/core";
+import { Typography, Container, Box, Link } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import cn from "classnames";
-import goodboye from "./assets/goodboye.png";
 import splash from "./assets/photos/carmen.jpg";
 import torus from "./assets/blueshape1.png";
 import twisty from "./assets/blueshape3.png";
@@ -15,14 +14,15 @@ import gameJam3 from "./assets/photos/gamejam3.JPG";
 import tetris from "./assets/photos/tetris.JPG";
 import whale from "./assets/photos/whale.JPG";
 
+import Bork from './components/Bork';
 import Socials from './components/Socials';
 
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import MailIcon from "@material-ui/icons/Mail";
-import YouTubeIcon from "@material-ui/icons/YouTube";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+// import TwitterIcon from "@material-ui/icons/Twitter";
+// import MailIcon from "@material-ui/icons/Mail";
+// import YouTubeIcon from "@material-ui/icons/YouTube";
 
-import { ReactComponent as DiscordIcon } from "./assets/Discord-Logo-White.svg";
+// import { ReactComponent as DiscordIcon } from "./assets/Discord-Logo-White.svg";
 
 const styles = (theme) => ({
     root: {
@@ -613,7 +613,8 @@ const Page = ({ classes, rootClassName, className, ...props }) => {
                 />
             </Container>
 
-            <Container align="center" className={cn(classes.footer)}>
+            <Bork woof="woof"/>
+            {/* <Container align="center" className={cn(classes.footer)}>
                 <div className={cn(classes.inlineBlock, classes.heWoof)}>
                     <Typography align="center">woof</Typography>
                     <img
@@ -622,7 +623,7 @@ const Page = ({ classes, rootClassName, className, ...props }) => {
                         className={cn(classes.goodBoye)}
                     />
                 </div>
-            </Container>
+            </Container> */}
         </div>
     );
 };
