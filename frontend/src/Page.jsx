@@ -16,6 +16,8 @@ import whale from "./assets/photos/whale.JPG";
 
 import Bork from './components/Bork';
 import Socials from './components/Socials';
+import SplashCardLeft from './components/SplashCardLeft';
+import SplashCardRight from './components/SplashCardRight';
 
 // import FacebookIcon from "@material-ui/icons/Facebook";
 // import TwitterIcon from "@material-ui/icons/Twitter";
@@ -280,195 +282,63 @@ const Page = ({ classes, rootClassName, className, ...props }) => {
             </Container>
 
             <Container className={cn(classes.body)} id="info">
-                <Box className={cn(classes.box0)}>
-                    <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1, classes.leftBox)}>
-                        <Typography
-                            variant="h4"
-                            className={cn(classes.titleLeft)}
-                        >
-                            ABOUT US
-                        </Typography>
-                        <Typography className={cn(classes.paragraph)}>
-                            Love video games? Curious as to how they get made?
-                            Then EGaDS is the club for you! We are a group of
-                            interdisciplinary game development lovers; we want
-                            to give you a peek behind the curtain as to how they
-                            are created, and give you the skills and confidence
-                            to begin creating your own.
-                        </Typography>
-                    </Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowRight
-                            )}
-                        >
-                            <img
-                                src={gameJam1}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div
-                                className={cn(classes.bestBoyeBorderRight)}
-                            ></div>
-                        </Box>
-                    </Box>
-                </Box>
+                <SplashCardLeft
+                    title="ABOUT US"
+                    description="Love video games? Curious as to how they get made?
+                    Then EGaDS is the club for you! We are a group of
+                    interdisciplinary game development lovers; we want
+                    to give you a peek behind the curtain as to how they
+                    are created, and give you the skills and confidence
+                    to begin creating your own."
+                    img={gameJam1}
+                />
 
-                <Box className={cn(classes.box0)}>
-                    <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowLeft
-                            )}
-                        >
-                            <img
-                                src={gameJam2}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div className={cn(classes.bestBoyeBorderLeft)}>
-                                {" "}
-                            </div>
-                        </Box>
-                    </Box>
-                    <Box className={cn(classes.box1, classes.rightBox)}>
-                        <Typography
-                            variant="h4"
-                            className={cn(classes.titleRight)}
-                        >
-                            WEEKLY MEETINGS
-                        </Typography>
-                        <Typography className={cn(classes.paragraph)}>
-                            Tune in each week as numerous gaming professionals
-                            stop by the GDC to share their stories of how they
-                            made it, and the advice they have for those who are
-                            looking to enter into the gaming industry. On top of
-                            giving career advice, members are also exposed to
-                            various topics concerning the industry. Great
-                            chances to learn about diverse aspects of the game
-                            development world!
-                            <br />
-                        </Typography>
-                    </Box>
-                </Box>
+                <SplashCardRight
+                    title="WEEKLY MEETINGS"
+                    description="Tune in each week as numerous gaming professionals
+                    stop by the GDC to share their stories of how they
+                    made it, and the advice they have for those who are
+                    looking to enter into the gaming industry. On top of
+                    giving career advice, members are also exposed to
+                    various topics concerning the industry. Great
+                    chances to learn about diverse aspects of the game
+                    development world!"
+                    img={gameJam2}
+                />
 
-                <Box className={cn(classes.box0)}>
-                    <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1, classes.leftBox)}>
-                        <Typography
-                            variant="h4"
-                            className={cn(classes.titleLeft)}
-                        >
-                            WORKSHOPS
-                        </Typography>
-                        <Typography className={cn(classes.paragraph)}>
-                            Led by EGaDS officers, students will get hands-on
-                            experience in vital tools to game development such
-                            as Unreal Blueprints, C# scripting for Unity, and
-                            Blender. Designed for beginners in mind (and
-                            intermediate users), members will walk away being
-                            confident in starting their own projects!
-                            <br />
-                        </Typography>
-                    </Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowRight
-                            )}
-                        >
-                            <img
-                                src={gameJam3}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div
-                                className={cn(classes.bestBoyeBorderRight)}
-                            ></div>
-                        </Box>
-                    </Box>
-                </Box>
+                <SplashCardLeft
+                    title="WORKSHOPS"
+                    description="Led by EGaDS officers, students will get hands-on
+                    experience in vital tools to game development such
+                    as Unreal Blueprints, C# scripting for Unity, and
+                    Blender. Designed for beginners in mind (and
+                    intermediate users), members will walk away being
+                    confident in starting their own projects!"
+                    img={gameJam3}
+                />
 
-                <Box className={cn(classes.box0)}>
-                    <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowLeft
-                            )}
-                        >
-                            <img
-                                src={tetris}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div
-                                className={cn(classes.bestBoyeBorderLeft)}
-                            ></div>
-                        </Box>
-                    </Box>
-                    <Box className={cn(classes.box1, classes.rightBox)}>
-                        <Typography
-                            variant="h4"
-                            className={cn(classes.titleRight)}
-                        >
-                            GAME JAMS
-                        </Typography>
-                        <Typography className={cn(classes.paragraph)}>
-                            Throughout the academic year, EGaDs hosts game jams
-                            such as the Global Game Jam and the UT Game Jame
-                            where members have the chance to collaborate with
-                            their fellow peers and friends to design a game. A
-                            fun opportunity to test your skills and gain
-                            experience!
-                            <br />
-                        </Typography>
-                    </Box>
-                </Box>
+                <SplashCardRight
+                    title="GAME JAMS"
+                    description="Throughout the academic year, EGaDs hosts game jams
+                    such as the Global Game Jam and the UT Game Jame
+                    where members have the chance to collaborate with
+                    their fellow peers and friends to design a game. A
+                    fun opportunity to test your skills and gain
+                    experience!"
+                    img={tetris}
+                />
 
-                <Box className={cn(classes.box0)}>
-                    <Box className={cn(classes.blurBox)}></Box>
-                    <Box className={cn(classes.box1, classes.leftBox)}>
-                        <Typography
-                            variant="h4"
-                            className={cn(classes.titleLeft)}
-                        >
-                            SOCIAL EVENTS
-                        </Typography>
-                        <Typography className={cn(classes.paragraph)}>
-                            Members will have the opportunity to attend socials
-                            to meet fellow developers. Professionals such as
-                            artists, designers, programmers where you will have
-                            the chance to learn about various companies around
-                            Austin and the gaming culture here, in addition to
-                            networking!
-                        </Typography>
-                    </Box>
-                    <Box className={cn(classes.box1)}>
-                        <Box
-                            className={cn(
-                                classes.bestBoyeBox,
-                                classes.boxShadowRight
-                            )}
-                        >
-                            <img
-                                src={whale}
-                                alt="a very good boye"
-                                className={cn(classes.bestBoye)}
-                            />
-                            <div
-                                className={cn(classes.bestBoyeBorderRight)}
-                            ></div>
-                        </Box>
-                    </Box>
-                </Box>
+                <SplashCardLeft
+                    title="SOCIAL EVENTS"
+                    description="Members will have the opportunity to attend socials
+                    to meet fellow developers. Professionals such as
+                    artists, designers, programmers where you will have
+                    the chance to learn about various companies around
+                    Austin and the gaming culture here, in addition to
+                    networking!"
+                    img={whale}
+                />
+
                 <Typography variant="h4" className={cn(classes.titleMiddle)}>
                     CONNECT WITH US
                 </Typography>
