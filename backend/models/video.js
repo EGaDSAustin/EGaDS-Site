@@ -16,6 +16,11 @@ const VideoSchema = mongoose.Schema({
     }
 });
 
-const Video = mongoose.model('event', VideoSchema);
+let Video;
+try {
+  Video = mongoose.model('video');
+} catch (error) {
+  Video = mongoose.model('video', VideoSchema);
+}
 
 module.exports = Video

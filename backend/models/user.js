@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const User = mongoose.Schema({
+const UserSchema = mongoose.Schema({
     name : {
         type: String,
         require: [true, "Event name required"]
@@ -8,5 +8,13 @@ const User = mongoose.Schema({
     
 
 });
+
+let User;
+try {
+  User = mongoose.model('user');
+} catch (error) {
+  User = mongoose.model('user', UserSchema);
+}
+
 
 module.exports = User

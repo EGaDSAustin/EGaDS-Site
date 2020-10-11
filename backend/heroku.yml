@@ -1,0 +1,18 @@
+setup:
+  addons:
+  config:
+build:
+  docker:
+    web: Dockerfile
+    worker: worker/Dockerfile
+    
+release:
+  image: worker
+
+# run:
+#   web: bundle exec puma -C config/puma.rb
+#   worker: python myworker.py
+#   asset-syncer:
+#     command:
+#       - python asset-syncer.py
+#     image: worker

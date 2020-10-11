@@ -16,6 +16,13 @@ const GameSchema = mongoose.Schema({
 
 
 });
-const Game = mongoose.model('game', GameSchema);
+
+
+let Game;
+try {
+  Game = mongoose.model('game');
+} catch (error) {
+  Game = mongoose.model('game', GameSchema);
+}
 
 module.exports = Game

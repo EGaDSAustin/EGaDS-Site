@@ -21,6 +21,11 @@ const EventSchema = mongoose.Schema({
     banner : String
 });
 
-const Event = mongoose.model('event', EventSchema);
+let Event;
+try {
+  Event = mongoose.model('event');
+} catch (error) {
+  Event = mongoose.model('event', EventSchema);
+}
 
-module.exports = Event
+module.exports = Event;
