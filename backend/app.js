@@ -14,7 +14,7 @@ const usersRouter = require("./routes/users");
 const gamesRouter = require("./routes/games");
 const videosRouter = require("./routes/videos");
 
-const PORT = 8080;
+const PORT = process.env.PORT;
 const app = express();
 
 app.get("/", (req, res) => res.send("hewwo gamer uwu!"));
