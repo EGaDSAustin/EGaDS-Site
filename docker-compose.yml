@@ -15,7 +15,7 @@ services:
       - NODE_ENV=DEV
     build:
       context: ./backend
-      dockerfile: Dockerfle.dev
+      dockerfile: Dockerfile.dev
     env_file:
       - ./backend/dev.env
     volumes:
