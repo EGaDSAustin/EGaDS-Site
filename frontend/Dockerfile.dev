@@ -1,12 +1,8 @@
 FROM node:lts-buster
 
-RUN mkdir -p /usr/src/build
-WORKDIR /usr/src/build
+WORKDIR /usr/src/app
 COPY ./package*.json ./
 RUN npm i --production --silent
-# COPY . .
-WORKDIR /usr/src/app
 EXPOSE 3000
 
-ENTRYPOINT [ "make" ]
-CMD [ ".docker-start" ]
+CMD [ "npm", "start" ]

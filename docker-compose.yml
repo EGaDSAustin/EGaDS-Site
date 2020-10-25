@@ -8,6 +8,7 @@ services:
       - NODE_ENV=DEV
     volumes:
       - ./frontend:/usr/src/app
+    container_name: egads-site-frontend-dev
     ports:
       - "3000:80"
   backend:
@@ -18,7 +19,10 @@ services:
       dockerfile: Dockerfile.dev
     env_file:
       - ./backend/dev.env
+    stdin_open: true
+    container_name: egads-site-backend-dev
     volumes:
       - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - "8080:8080"
