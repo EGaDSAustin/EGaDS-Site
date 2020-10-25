@@ -5,7 +5,7 @@ COPY ./package*.json ./
 RUN npm i --save-dev --production --silent
 COPY . .
 EXPOSE 8080
-CMD "npm start"
+CMD "which npm; npm start"
 
 # /*
 # Docker build coommands
