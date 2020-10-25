@@ -1,11 +1,13 @@
-FROM node:lts-buster
+FROM node:lts-buster AS install
+RUN mkdir /src
+WORKDIR /src
 COPY ./package*.json ./
-RUN npm i --production --silent
+RUN npm i --save-dev --production --silent
 COPY . .
 EXPOSE 8080
-ENTRYPOINT [ "bash" ]
-CMD [ "npm start --verbose" ]
 
+ENTRYPOINT [ "npm" ]
+CMD ["start"]
 # /*
 # Docker build coommands
 
