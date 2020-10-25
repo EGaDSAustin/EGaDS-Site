@@ -1,7 +1,7 @@
 DOCKER_BUILD_DIR=/usr/src/build
 DOCKER_APP_DIR=/usr/src/app
 DOCKER_START_COMMAND=npm start
-DOCKER_START_COMMAND_DEV=npm start
+DOCKER_START_COMMAND_DEV=npm run dev
 
 
 .docker-start: package.json 
