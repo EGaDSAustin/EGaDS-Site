@@ -1,4 +1,4 @@
-FROM node:lts-buster AS install
+FROM node:lts-buster
 RUN mkdir /src
 WORKDIR /src
 COPY ./package*.json ./

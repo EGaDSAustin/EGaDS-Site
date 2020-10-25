@@ -1,10 +1,10 @@
 
 build:
   docker:
-    backend: backend/Dockerfile
-    
+    web: backend/Dockerfile
+
 release:
-  image: backend
+  image: web
 
 # run:
 #   web: bundle exec puma -C config/puma.rb
