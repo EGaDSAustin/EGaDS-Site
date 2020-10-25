@@ -1,11 +1,10 @@
 FROM node:lts-buster
-RUN mkdir /src
-WORKDIR /src
 COPY ./package*.json ./
-RUN npm i --save-dev --production --silent
+RUN npm i --production --silent
 COPY . .
 EXPOSE 8080
-CMD "which npm"
+ENTRYPOINT [ "npm" ]
+CMD [ " start --verbose" ]
 
 # /*
 # Docker build coommands
