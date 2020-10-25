@@ -3,8 +3,8 @@ COPY ./package*.json ./
 RUN npm i --production --silent
 COPY . .
 EXPOSE 8080
-ENTRYPOINT [ "npm" ]
-CMD [ " start --verbose" ]
+ENTRYPOINT [ "bash" ]
+CMD [ "npm start --verbose" ]
 
 # /*
 # Docker build coommands
